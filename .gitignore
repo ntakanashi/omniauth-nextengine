@@ -1,0 +1,4 @@
+vendor
+.bundle
+example/Gemfile.lock
+.ruby-version
