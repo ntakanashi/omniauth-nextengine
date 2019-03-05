@@ -21,8 +21,12 @@ Or install it yourself as:
     $ gem install omniauth-nextengine
 
 ## Usage
-
-TODO: Write usage instructions here
+Here's an example for adding the middleware to a Rails app (config/initializers/omniauth.rb):
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :nextengine, ENV["CLIENT_ID"], ENV["CLIENT_SECRET"]
+end
+```
 
 ## Development
 
