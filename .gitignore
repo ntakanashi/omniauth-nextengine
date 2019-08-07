@@ -2,3 +2,4 @@ vendor
 .bundle
 example/Gemfile.lock
 .ruby-version
+.Gemfile.lock
