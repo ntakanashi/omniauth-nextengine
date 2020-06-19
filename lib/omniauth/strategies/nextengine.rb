@@ -16,6 +16,18 @@ module OmniAuth
         request.params['uid']
       end
 
+      info do
+        {
+          company_ne_id: raw_info["company_ne_id"],
+          company_name: raw_info["company_name"],
+          company_kana: raw_info["company_kana"],
+          pic_ne_id: raw_info["pic_ne_id"],
+          pic_name: raw_info["pic_name"],
+          pic_kana: raw_info["pic_kana"],
+          pic_mail_address: raw_info["pic_mail_address"],
+        }
+      end
+
       credentials do
         {
           'access_token' => access_token.token,
