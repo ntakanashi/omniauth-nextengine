@@ -18,13 +18,13 @@ module OmniAuth
 
       info do
         {
-          company_ne_id: raw_info["company_ne_id"],
-          company_name: raw_info["company_name"],
-          company_kana: raw_info["company_kana"],
-          pic_ne_id: raw_info["pic_ne_id"],
-          pic_name: raw_info["pic_name"],
-          pic_kana: raw_info["pic_kana"],
-          pic_mail_address: raw_info["pic_mail_address"],
+          company_ne_id: access_token["company_ne_id"],
+          company_name: access_token["company_name"],
+          company_kana: access_token["company_kana"],
+          pic_ne_id: access_token["pic_ne_id"],
+          pic_name: access_token["pic_name"],
+          pic_kana: access_token["pic_kana"],
+          pic_mail_address: access_token["pic_mail_address"],
         }
       end
 
@@ -33,10 +33,6 @@ module OmniAuth
           'access_token' => access_token.token,
           'refresh_token' => access_token.refresh_token,
         }
-      end
-
-      def raw_info
-        @raw_info ||= access_token.get('user').parsed
       end
 
       def request_phase
